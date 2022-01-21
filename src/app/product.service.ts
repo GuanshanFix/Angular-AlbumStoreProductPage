@@ -10,8 +10,7 @@ export class ProductService {
   constructor(private _http: Http) { }
 
   getAlbum(id: number) {
-    // tslint:disable-next-line: no-shadowed-variable
-    return this._http.get(this._albumUrl).map(Response => Response.json());
+    return this._http.get(this._albumUrl).map((response) => response.json());
   }
 
 }
